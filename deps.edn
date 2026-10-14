@@ -1,0 +1,6 @@
+{:paths ["src"] 
+ 
+ :deps {org.clojure/clojure {:mvn/version "1.11.1"}} 
+
+ :aliases
+ {:run {:main-opts ["-m" "consultas.main"]}}}
