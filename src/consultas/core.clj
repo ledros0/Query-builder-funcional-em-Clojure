@@ -3,6 +3,8 @@
             [consultas.sintaxe :as sintaxe]
             [consultas.compilador :as compilador]))
 
+(defn selecionar [c campos]
+  (update c :estagios conj [:selecionar campos]))
 
 ;;                                     Texto -> registros
 (defn- converter [tipo s]

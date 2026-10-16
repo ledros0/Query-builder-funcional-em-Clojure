@@ -2,18 +2,17 @@
   (:require [clojure.string :as str]
             [consultas.core :as core]))
 
-(defn- processar
-  "Recebe uma linha e devolve o texto a imprimir. Nunca lança exceção."
-  [dados linha]
+(defn- processar [dados linha]
   (try
     (let [linha (str/trim linha)]
       (cond
         (str/blank? linha) "ERRO: comando vazio"
-        (str/starts-with? linha "QUERY ")
-        (let [ast (core/analisar (subs linha 6))
+
+        (or (= linha "QUERY") (str/starts-with? linha "QUERY "))
+        (let [ast (core/analisar (subs linha 5))
               res (core/executar ast dados)]
-          ;; aqui entra a formatação do resultado
           (pr-str res))
+
         :else (str "ERRO: comando desconhecido: " linha)))
     (catch Exception e
       (str "ERRO: " (.getMessage e)))))
