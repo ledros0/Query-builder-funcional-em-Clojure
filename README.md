@@ -1,6 +1,6 @@
-Aline Flores Douaki
-Guilherme Biribilli
-Mateus Borba Silveira
+Aline Flores Douaki  
+Guilherme Biribilli  
+Mateus Borba Silveira  
 
 
 # Query builder funcional em Clojure
