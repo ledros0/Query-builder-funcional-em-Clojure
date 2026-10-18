@@ -1,6 +1,7 @@
-Nome Completo do Integrante 1
-Nome Completo do Integrante 2
-Nome Completo do Integrante 3
+Aline Flores Douaki
+Guilherme Biribilli
+Mateus Borba Silveira
+
 
 # Query builder funcional em Clojure
 
